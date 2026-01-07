@@ -2059,7 +2059,7 @@
                         const response = await fetch(url, { method: 'HEAD' });
                         
                         if (response.ok) {
-                            return response.url;
+                            return response.url.replace('http://', 'https://');
                         }
                     } catch (e) {
                         console.log(`音质 ${quality} 不可用:`, e);
